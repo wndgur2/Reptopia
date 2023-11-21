@@ -51,16 +51,9 @@ function hideCage(ic){
 }
 
 function showCageInfo(si){
-  if(pageState == "cages"){
-    pageState = "cageInfo";
-    cageList = document.getElementsByClassName("cage");
-    for(let cageL = 0; cageL < cageList.length; cageL++){
-      if(si!=cageL) hideCage(cageL);
-      else cageList[cageL].setAttribute("style", "width: 100%; height: 80%;");
-    }
-  } else if(pageState=="cageInfo"){
-    pageState = "cages";
-    hideCage(si);
-    showCages();
+  cageList = document.getElementsByClassName("cage");
+  for(let cageL = 0; cageL < cageList.length; cageL++){
+    if(si!=cageL) hideCage(cageL);
+    else cageList[cageL].setAttribute("style", "width: 100%; height: 80%;");
   }
 }

@@ -90,7 +90,6 @@ input[type=button] {
   width: 30%;
   transition: height 600ms ease-out;
   z-index: 2;
-  border-radius: 2%;
   padding: 0.2%;
   opacity: 0.9;
 }
