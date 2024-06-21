@@ -11,8 +11,8 @@
 //Html Element 설정
 var canvasEl = document.createElement("canvas");
 var ctx = canvasEl.getContext("2d");
-canvasEl.width = 500;
-canvasEl.height = 650;          //canvs의 너비와 높이
+canvasEl.width = window.innerWidth-20;
+canvasEl.height = window.innerHeight-60;          //canvs의 너비와 높이
 document.body.appendChild(canvasEl);
 
 //변수 초기값 정의
@@ -30,8 +30,8 @@ function loop(){  //메인 루프
     frame += 1;
 
     //임의의 이벤트
-    if(objects.length<80 & frame%4 == 0)objects.push(createRandomObject());
-    if(frame%240 == 0)objects.splice(1, 78);
+    if(objects.length<180 & frame%4 == 0)objects.push(createRandomObject());
+    // if(frame%240 == 0)objects.splice(1, 78);
 
     //배경색
     ctx.fillStyle=arrToRGB(BGC);
