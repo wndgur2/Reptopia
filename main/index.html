@@ -9,6 +9,21 @@
     2. canvas onclick 함수 설정: 클릭 시 해당 사육장 상세보기
     3. feed 삭제: 상세 보기로 이동
 -->
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>canvas test</title>
+  <script src="background.js" defer></script>
+  <script src="main.js" defer></script>
+  <script src="slider.js"></script>
+  <script src="cage.js"></script>
+  <script src="eye.js"></script>
+  <script src="object.js"></script>
+  <link rel="stylesheet" type="text/css" href="reptopia.css" />
+</head>
+
 <body>
   <canvas id="background"></canvas>
   <div id="slides">
@@ -27,17 +42,18 @@
     <canvas width="1920" height="1080" class="cage" onclick="showCageInfo(3)"></canvas>
     <canvas width="1920" height="1080" class="cage" onclick="showCageInfo(4)"></canvas>
   </div>
+  <div id="store" class="modal">
+    <h1>
+      Nothing to see here.
+    </h1>
+  </div>
+  <div id="work" class="modal">
+    <h1>
+      No work to do...
+    </h1>
+  </div>
+
   <img id="arrow" style="opacity: 0;" src="imgs/arrow.png" onclick="showSlides()"></img>
 </body>
 
-<!-- Bootstrap core JavaScript
-   ================================================== -->
-<script src="./background.js" defer></script>
-<script src="./main.js" defer></script>
-<script src="./slider.js" defer></script>
-<script src="./cage.js"></script>  
-<script src="./eye.js"></script>
-<script src="./object.js"></script>
-<link rel="stylesheet" type="text/css" href="./reptopia.css" />
-</body>
 </html>

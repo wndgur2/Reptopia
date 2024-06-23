@@ -38,7 +38,7 @@ function check(n){
     hideSlides();
     if(n==1) showCages();
     else if(n==2) openStore();
-    else if(n==3) showWorkplace();
+    else if(n==3) openWork();
     return 0;
   }
   beforeN = n;
@@ -74,14 +74,24 @@ function hideSlides(){
 function showSlides(){
   pageState = "slide";
   hideCages();
+  hideModal();
   let slides = document.getElementById("slides");
   slides.setAttribute("style", 'top: 40%');
 }
 
 function openStore(){
-
+  let store = document.getElementById("store");
+  store.style.display = "flex";
 }
 
-function showWorkplace(){
+function openWork(){
+  let work = document.getElementById("work");
+  work.style.display = "flex";
+}
 
+function hideModal(){
+  let store = document.getElementById("store");
+  store.style.display = "none";
+  let work = document.getElementById("work");
+  work.style.display = "none";
 }
